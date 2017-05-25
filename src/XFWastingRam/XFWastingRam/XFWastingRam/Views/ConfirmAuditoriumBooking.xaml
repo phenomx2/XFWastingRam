@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ui:ContentPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:ui="clr-namespace:XFWastingRam.Views"
+                    xmlns:vms="clr-namespace:XFWastingRam.ViewModels"
+                    x:Class="XFWastingRam.Views.ConfirmAuditoriumBooking"
+                    x:TypeArguments="vms:ConfirmAuditoriumBookingViewModel"
+                    BackgroundColor="White">
+    <Grid BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".10*"/>
+            <RowDefinition Height=".75*"/>
+        </Grid.RowDefinitions>
+        <!--Información de usuario-->
+        <Image Source="logo.png"/>
+        <!--Confirm-->
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".85*"/>
+                <RowDefinition Height=".15*"/>
+            </Grid.RowDefinitions>
+            <StackLayout VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="CenterAndExpand">
+                <Label Text="Confirmación"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="Estas reservando:"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="Auditorio"
+                       HorizontalOptions="Center"/>
+                <Label Text="Horario de: a:"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="Día"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="Al aceptar se genera el cargo y será enviado a cuentas por cobrar"
+                       HorizontalTextAlignment="Center"/>
+            </StackLayout>
+            <StackLayout Grid.Row="1"
+                         Orientation="Horizontal"
+                         HorizontalOptions="CenterAndExpand">
+                <Button x:Name="Cancel" 
+                        Text="Cancelar"
+                        VerticalOptions="Center"/>
+                <Button x:Name="Comfirm" 
+                        Text="Tap Here !"
+                        VerticalOptions="Center"/>
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ui:ContentPageBase>

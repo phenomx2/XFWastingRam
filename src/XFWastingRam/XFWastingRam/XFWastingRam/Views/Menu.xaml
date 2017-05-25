@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ui:ContentPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:ui="clr-namespace:XFWastingRam.Views"
+                    xmlns:vms="clr-namespace:XFWastingRam.ViewModels"
+                    x:Class="XFWastingRam.Views.Menu"
+                    x:TypeArguments="vms:MenuViewModel">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Perfil" Order="Secondary" x:Name="Profile"/>
+    <ToolbarItem Text="Quienes somos" Order="Secondary"/>
+    <ToolbarItem Text="Comentarios y sugerencias" Order="Secondary"/>
+    <ToolbarItem Text="Nuestros edificios" Order="Secondary"/>
+  </ContentPage.ToolbarItems>
+    <Grid BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".10*"/>
+            <RowDefinition Height=".75*"/>
+        </Grid.RowDefinitions>
+        <!--Información de usuario-->
+      <Image Source="logo.png"/>
+        <!--Menu-->
+      <Grid Grid.Row="1"
+            BackgroundColor="Aqua"
+            VerticalOptions="FillAndExpand">
+          <Grid.RowDefinitions>
+              <RowDefinition/>
+              <RowDefinition/>
+              <RowDefinition/>
+          </Grid.RowDefinitions>
+          <!--News letter amenities-->
+          <Grid HorizontalOptions="FillAndExpand"
+                BackgroundColor="White">
+              <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width=".05*"/>
+                  <ColumnDefinition Width=".4*"/>
+                  <ColumnDefinition Width=".1*"/>
+                  <ColumnDefinition Width=".4*"/>
+                  <ColumnDefinition Width=".05*"/>
+              </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height=".2*"/>
+              <RowDefinition Height=".6*"/>
+              <RowDefinition Height=".2*"/>
+              <RowDefinition Height=".4*"/>
+              <RowDefinition Height=".05*"/>
+            </Grid.RowDefinitions>
+                <Frame Grid.Column="1" 
+                       Grid.Row="1" 
+                       Grid.RowSpan="3"
+                       Style="{StaticResource Rounded}"
+                       
+                       Padding="5">
+                    <Grid 
+                           Style="{StaticResource MenuItem}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height=".8*"/>
+                            <RowDefinition Height=".2*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="news.png">
+
+                        </Image>
+                        <Label Text="Newsletter"
+                         Grid.Row="1"
+                         HorizontalOptions="CenterAndExpand"
+                         TextColor="Black"/>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Column="3" 
+                       Grid.Row="1" 
+                       Grid.RowSpan="3"
+                       Style="{StaticResource Rounded}"
+                       
+                       Padding="5">
+                    <Grid 
+                           Style="{StaticResource MenuItem}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height=".8*"/>
+                            <RowDefinition Height=".2*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="amenities.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="AmenitiesGesture" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Text="Tap Here"
+                         Grid.Row="1"
+                         HorizontalOptions="CenterAndExpand"
+                         TextColor="Black"/>
+                    </Grid>
+                </Frame>
+          </Grid>
+          <!--Visitas Estacionamiento-->
+
+          <Grid Grid.Row="1"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="White">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".05*"/>
+                  <ColumnDefinition Width=".4*"/>
+                  <ColumnDefinition Width=".1*"/>
+                  <ColumnDefinition Width=".4*"/>
+                  <ColumnDefinition Width=".05*"/>
+              </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition Height=".2*"/>
+                  <RowDefinition Height=".6*"/>
+                  <RowDefinition Height=".2*"/>
+                  <RowDefinition Height=".4*"/>
+                  <RowDefinition Height=".05*"/>
+              </Grid.RowDefinitions>
+                <Frame Grid.Column="1" 
+                       Grid.Row="1" 
+                       Grid.RowSpan="3"
+                       Style="{StaticResource Rounded}"
+                       
+                       Padding="5">
+                    <Grid 
+                           Style="{StaticResource MenuItem}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height=".8*"/>
+                            <RowDefinition Height=".2*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="visits.png" />
+                        <Label Text="Option"
+                         Grid.Row="1"
+                         HorizontalOptions="CenterAndExpand"
+                         TextColor="Black"/>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Column="3" 
+                       Grid.Row="1" 
+                       Grid.RowSpan="3"
+                       Style="{StaticResource Rounded}"
+                       
+                       Padding="5"
+                       >
+                    <Grid 
+                           Style="{StaticResource MenuItem}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height=".8*"/>
+                            <RowDefinition Height=".2*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="parking.png"/>
+                        <Label Text="Option"
+                         Grid.Row="1"
+                         HorizontalTextAlignment="Center"
+                         TextColor="Black"/>
+                    </Grid>
+                </Frame>
+          </Grid>
+
+          <!--Mantenimiento Contactanos-->
+          <Grid Grid.Row="2"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".05*"/>
+                <ColumnDefinition Width=".4*"/>
+                <ColumnDefinition Width=".1*"/>
+                <ColumnDefinition Width=".4*"/>
+                <ColumnDefinition Width=".05*"/>
+            </Grid.ColumnDefinitions>
+              <Grid.RowDefinitions>
+                <RowDefinition Height=".2*"/>
+                  <RowDefinition Height=".6*"/>
+                  <RowDefinition Height=".2*"/>
+                  <RowDefinition Height=".4*"/>
+                  <RowDefinition Height=".05*"/>
+              </Grid.RowDefinitions>
+                <Frame Grid.Column="1" 
+                       Grid.Row="1" 
+                       Grid.RowSpan="3"
+                       Style="{StaticResource Rounded}"
+                       
+                       Padding="5">
+                    <Grid 
+                           Style="{StaticResource MenuItem}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height=".8*"/>
+                            <RowDefinition Height=".2*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="maintenance.png"/>
+                        <Label Text="Option"
+                         Grid.Row="1"
+                         HorizontalOptions="CenterAndExpand"
+                         TextColor="Black"/>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Column="3" 
+                       Grid.Row="1" 
+                       Grid.RowSpan="3"
+                       Style="{StaticResource Rounded}"
+                       
+                       Padding="5">
+                    <Grid 
+                           Style="{StaticResource MenuItem}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height=".8*"/>
+                            <RowDefinition Height=".2*"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="contactus.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="ContactUsGesture" />
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label Text="Option"
+                         Grid.Row="1"
+                         HorizontalOptions="CenterAndExpand"
+                         TextColor="Black"/>
+                    </Grid>
+                </Frame>
+          </Grid>
+
+      </Grid>
+    </Grid>
+</ui:ContentPageBase>

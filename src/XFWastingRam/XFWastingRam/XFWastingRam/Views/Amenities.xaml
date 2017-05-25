@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:ContentPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:ui="clr-namespace:XFWastingRam.Views"
+             xmlns:vms="clr-namespace:XFWastingRam.ViewModels"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:XFWastingRam.Views;assembly=XFWastingRam"
+             x:Class="XFWastingRam.Views.Amenities"
+             x:TypeArguments="vms:AmenitiesViewModel">
+    <Grid BackgroundColor="Azure">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".10*"/>
+            <RowDefinition Height=".75*"/>
+        </Grid.RowDefinitions>
+        <!--Información de usuario-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Source="icon.png"/>
+            <StackLayout Orientation="Horizontal"
+                         Grid.Column="1">
+                <Image Source="icon.png"/>
+                <StackLayout>
+                    <Label Text="Rogelio Torres"
+                           TextColor="Black"/>
+                    <Label Text="Hexa capital"
+                           TextColor="Black"/>
+                    <Label Text="Building manager"
+                           TextColor="Black"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+        <!--Menu-->
+        <Grid Grid.Row="1"
+              BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".20*"/>
+                <RowDefinition Height=".80*"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="MyReservations"
+                    Text="Mis reservaciones"
+                    TextColor="Black"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    BackgroundColor="Transparent"/>
+            <ScrollView Grid.Row="1">
+                <StackLayout x:Name="AmenitiesContainer">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="AuditoriumGesture"/>
+                        </Grid.GestureRecognizers>
+                        <Image Source="newsletter.png"
+                               HeightRequest="75"/>
+                        <Label Grid.Column="1"
+                               Text="Tap Here"
+                               TextColor="Black"
+                               VerticalOptions="CenterAndExpand"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="HallGesture"/>
+                        </Grid.GestureRecognizers>
+                        <Image Source="amenities.png"
+                               HeightRequest="75"/>
+                        <Label Grid.Column="1"
+                               Text="Salas"
+                               TextColor="Black"
+                               VerticalOptions="CenterAndExpand"/>
+                    </Grid>
+
+                    
+                </StackLayout>
+            </ScrollView>
+        </Grid> 
+      
+        
+    </Grid>
+</views:ContentPageBase>

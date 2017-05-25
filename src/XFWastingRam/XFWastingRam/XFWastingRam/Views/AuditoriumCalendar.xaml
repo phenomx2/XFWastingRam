@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ui:ContentPageBase  xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:ui="clr-namespace:XFWastingRam.Views"
+              xmlns:vms="clr-namespace:XFWastingRam.ViewModels"
+              x:Class="XFWastingRam.Views.AuditoriumCalendar"
+              x:TypeArguments="vms:AuditoriumCalendarViewModel"
+              BackgroundColor="White">
+
+    <Grid BackgroundColor="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".10*"/>
+            <RowDefinition Height=".75*"/>
+        </Grid.RowDefinitions>
+        <!--Información de usuario-->
+        <Image Source="logo.png"/>
+        <!--Calendario-->
+        <Grid x:Name="Calendar"
+              Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".08*"/>
+                <RowDefinition Height=".92*"/>
+            </Grid.RowDefinitions>
+            <Grid BackgroundColor="Aqua">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Atras"
+                        HorizontalOptions="Center"/>
+                <Label Text="Dia" 
+                       Grid.Column="1"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+                <Button Text="Adelante"
+                       Grid.Column="2"
+                       HorizontalOptions="Center"/>
+            </Grid>
+            <Grid Grid.Row="1"
+                  BackgroundColor="Beige">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid x:Name="Hours">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Text="7 a.m."  Grid.Row="1"/>
+                    <Label Text="8 a.m."  Grid.Row="2"/>
+                    <Label Text="9 a.m."  Grid.Row="3" />
+                    <Label Text="10a.m." Grid.Row="4" />
+                    <Label Text="11a.m." Grid.Row="5" />
+                    <Label Text="12p.m." Grid.Row="6" />
+                    <Label Text="13:00"  Grid.Row="7" />
+                    <Label Text="14:00"   Grid.Row="8" />
+                    <Label Text="15:00"  Grid.Row="9" />
+                    <Label Text="16:00"  Grid.Row="10"/>
+                    <Label Text="17:00"  Grid.Row="11"/>
+                    <Label Text="18:00"  Grid.Row="12"/>
+                    <Label Text="19:00"  Grid.Row="13"/>
+                    <Label Text="20:00"  Grid.Row="14"/>
+                    
+                </Grid>
+                <Grid x:Name="Monday"
+                      Grid.Column="1">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="MondayGesture"/>
+                    </Grid.GestureRecognizers>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Text="L" Style="{StaticResource CalendarLabel}"/>
+                    <BoxView Grid.Row="1" x:Name="MondayCell1"/>
+                    <BoxView Grid.Row="2" x:Name="MondayCell2"/>
+                    <BoxView Grid.Row="3" x:Name="MondayCell3"/>
+                    <BoxView Grid.Row="4" x:Name="MondayCell4"/>
+                    <BoxView Grid.Row="5" x:Name="MondayCell5"/>
+                    <BoxView Grid.Row="6" x:Name="MondayCell6"/>
+                    <BoxView Grid.Row="7" x:Name="MondayCell7"/>
+                    <BoxView Grid.Row="8" x:Name="MondayCell8"/>
+                    <BoxView Grid.Row="9" x:Name="MondayCell9"/>
+                    <BoxView Grid.Row="10" x:Name="MondayCell10"/>
+                    <BoxView Grid.Row="11" x:Name="MondayCell11"/>
+                    <BoxView Grid.Row="12" x:Name="MondayCell12"/>
+                    <BoxView Grid.Row="13" x:Name="MondayCell13"/>
+                    <BoxView Grid.Row="14" x:Name="MondayCell14" />
+                </Grid>
+                <Grid x:Name="Tuesday"
+                      Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Text="M" Style="{StaticResource CalendarLabel}"/>
+                    <BoxView Grid.Row="1"/>
+                    <BoxView Grid.Row="2"/>
+                    <BoxView Grid.Row="3"/>
+                    <BoxView Grid.Row="4"/>
+                    <BoxView Grid.Row="5"/>
+                    <BoxView Grid.Row="6"/>
+                    <BoxView Grid.Row="7"/>
+                    <BoxView Grid.Row="8"/>
+                    <BoxView Grid.Row="9"/>
+                    <BoxView Grid.Row="10"/>
+                    <BoxView Grid.Row="11"/>
+                    <BoxView Grid.Row="12"/>
+                    <BoxView Grid.Row="13"/>
+                    <BoxView Grid.Row="14" />
+                </Grid>
+                <Grid x:Name="Wednesday"
+                      Grid.Column="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Text="X" Style="{StaticResource CalendarLabel}"/>
+                    <BoxView Grid.Row="1"/>
+                    <BoxView Grid.Row="2"/>
+                    <BoxView Grid.Row="3"/>
+                    <BoxView Grid.Row="4"/>
+                    <BoxView Grid.Row="5"/>
+                    <BoxView Grid.Row="6"/>
+                    <BoxView Grid.Row="7"/>
+                    <BoxView Grid.Row="8"/>
+                    <BoxView Grid.Row="9"/>
+                    <BoxView Grid.Row="10"/>
+                    <BoxView Grid.Row="11"/>
+                    <BoxView Grid.Row="12"/>
+                    <BoxView Grid.Row="13"/>
+                    <BoxView Grid.Row="14" />
+                </Grid>
+                <Grid x:Name="Thursday"
+                      Grid.Column="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Text="J" Style="{StaticResource CalendarLabel}"/>
+                    <BoxView Grid.Row="1"/>
+                    <BoxView Grid.Row="2"/>
+                    <BoxView Grid.Row="3"/>
+                    <BoxView Grid.Row="4"/>
+                    <BoxView Grid.Row="5"/>
+                    <BoxView Grid.Row="6"/>
+                    <BoxView Grid.Row="7"/>
+                    <BoxView Grid.Row="8"/>
+                    <BoxView Grid.Row="9"/>
+                    <BoxView Grid.Row="10"/>
+                    <BoxView Grid.Row="11"/>
+                    <BoxView Grid.Row="12"/>
+                    <BoxView Grid.Row="13"/>
+                    <BoxView Grid.Row="14" />
+                </Grid>
+                <Grid x:Name="Friday"
+                      Grid.Column="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Text="V" Style="{StaticResource CalendarLabel}"/>
+                    <BoxView Grid.Row="1"/>
+                    <BoxView Grid.Row="2"/>
+                    <BoxView Grid.Row="3"/>
+                    <BoxView Grid.Row="4"/>
+                    <BoxView Grid.Row="5"/>
+                    <BoxView Grid.Row="6"/>
+                    <BoxView Grid.Row="7"/>
+                    <BoxView Grid.Row="8"/>
+                    <BoxView Grid.Row="9"/>
+                    <BoxView Grid.Row="10"/>
+                    <BoxView Grid.Row="11"/>
+                    <BoxView Grid.Row="12"/>
+                    <BoxView Grid.Row="13"/>
+                    <BoxView Grid.Row="14" />
+                </Grid>
+                <Grid x:Name="Saturday"
+                      Grid.Column="6">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Text="S" Style="{StaticResource CalendarLabel}"/>
+                    <BoxView Grid.Row="1"/>
+                    <BoxView Grid.Row="2"/>
+                    <BoxView Grid.Row="3"/>
+                    <BoxView Grid.Row="4"/>
+                    <BoxView Grid.Row="5"/>
+                    <BoxView Grid.Row="6"/>
+                    <BoxView Grid.Row="7"/>
+                    <BoxView Grid.Row="8"/>
+                    <BoxView Grid.Row="9"/>
+                    <BoxView Grid.Row="10"/>
+                    <BoxView Grid.Row="11"/>
+                    <BoxView Grid.Row="12"/>
+                    <BoxView Grid.Row="13"/>
+                    <BoxView Grid.Row="14" />
+                </Grid>
+                <Grid x:Name="Sunday"
+                      Grid.Column="7">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Text="D" Style="{StaticResource CalendarLabel}"/>
+                    <BoxView Grid.Row="1"/>
+                    <BoxView Grid.Row="2"/>
+                    <BoxView Grid.Row="3"/>
+                    <BoxView Grid.Row="4"/>
+                    <BoxView Grid.Row="5"/>
+                    <BoxView Grid.Row="6"/>
+                    <BoxView Grid.Row="7"/>
+                    <BoxView Grid.Row="8"/>
+                    <BoxView Grid.Row="9"/>
+                    <BoxView Grid.Row="10"/>
+                    <BoxView Grid.Row="11"/>
+                    <BoxView Grid.Row="12"/>
+                    <BoxView Grid.Row="13"/>
+                    <BoxView Grid.Row="14" />
+                </Grid>
+            </Grid>
+        </Grid>
+        
+    </Grid>
+</ui:ContentPageBase>

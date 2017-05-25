@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFWastingRam.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <x:String x:Key="FontString">Century Gothic</x:String>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource FontString}"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+            </Style>
+            <Style x:Key="MenuItem" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="#FBAE42"></Setter>
+                <!--<Setter Property="HorizontalOptions" Value="FillAndExpand"></Setter>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"></Setter>-->
+            </Style>
+            <Style x:Key="Rounded"  TargetType="Frame">
+                <Setter Property="CornerRadius" Value="6"/>
+                <Setter Property="BackgroundColor" Value="#FBAE42"/>
+                <Setter Property="Padding" Value="5"/>
+            </Style>
+
+            <Style TargetType="BoxView">
+                <Setter Property="BackgroundColor" Value="DarkGreen"/>
+            </Style>
+
+            <Style x:Key="CalendarLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

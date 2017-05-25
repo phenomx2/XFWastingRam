@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ui:ContentPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:ui="clr-namespace:XFWastingRam.Views"
+                    xmlns:vms="clr-namespace:XFWastingRam.ViewModels"
+                    x:Class="XFWastingRam.Views.Login"
+                    x:TypeArguments="vms:LoginViewModel"
+                    BackgroundColor="White">
+    <Grid HorizontalOptions="Center"
+                 VerticalOptions="CenterAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".33*"/>
+            <RowDefinition Height=".20*"/>
+            <RowDefinition Height=".46*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="HexaLogo"
+               Source="logo.png"
+               VerticalOptions="Start"
+               Grid.Row="0"
+               Scale=".75"
+            />
+        
+        <Label x:Name="WelcomeMessage"
+               FontFamily="Century Gothic"
+               TextColor="Black"
+               HorizontalOptions="CenterAndExpand"
+               Text="Bienvenido a Hexa Concierge"
+               FontSize="22"
+               Grid.Row="1"/>
+        <StackLayout Grid.Row="2"
+                     >
+            <Grid 
+                  HorizontalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Usuario:"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="Black"/>
+                <Entry x:Name="UserName"
+                       Grid.Column="1"
+                       Placeholder="Usuario"
+                       VerticalOptions="CenterAndExpand"
+                />
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Password"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       TextColor="Black"/>
+                <Entry Grid.Column="1"
+                       Placeholder="Password"
+                       VerticalOptions="CenterAndExpand"
+                       IsPassword="True"/>
+            </Grid>
+            <Button Text="Entrar" 
+                    x:Name="btnLogin"
+                    HorizontalOptions="Center"
+                    />
+        </StackLayout>
+    </Grid>
+</ui:ContentPageBase>

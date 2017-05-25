@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ui:ContentPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:vms="clr-namespace:XFWastingRam.ViewModels"
+                    xmlns:ui="clr-namespace:XFWastingRam.Views"
+                    x:Class="XFWastingRam.Views.UserProfile"
+                    x:TypeArguments="vms:UserProfileViewModel">
+    <StackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Source="icon.png"/>
+            <StackLayout Orientation="Horizontal"
+                         Grid.Column="1">
+                <Image Source="icon.png"/>
+                <StackLayout>
+                    <Label Text="Rogelio Torres"
+                           TextColor="Black"/>
+                    <Label Text="Hexa capital"
+                           TextColor="Black"/>
+                    <Label Text="Building manager"
+                           TextColor="Black"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ui:ContentPageBase>

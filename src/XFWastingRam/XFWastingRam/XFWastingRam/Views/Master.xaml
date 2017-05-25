@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ui:ContentPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:ui="clr-namespace:XFWastingRam.Views"
+                    xmlns:vms="clr-namespace:XFWastingRam.ViewModels"
+                    x:Class="XFWastingRam.Views.Master"
+                    x:TypeArguments="vms:MasterViewModel">
+</ui:ContentPageBase>
